@@ -2,6 +2,7 @@ package WayToFixBug.Stack;
 
 /**
  * @Description 基于数组的顺序栈
+ * 空间复杂度O(1)  时间复杂度O(1)
  * @Date 2020/10/22 8:05 下午
  * @Created by WayToFixingBug
  */
@@ -53,5 +54,27 @@ public class ArrayStack {
         String target = targets[count - 1];
         --count;
         return target;
+    }
+
+    /**
+     * 判断栈是否为空
+     * @return
+     */
+    public boolean isEmpty() {
+        if (count == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        ArrayStack arrayStack = new ArrayStack(5);
+        for (int i = 0; i < 5; i++) {
+            arrayStack.push(i + "");
+        }
+        while (!arrayStack.isEmpty()){
+            System.out.println(arrayStack.pop());
+        }
+
     }
 }
