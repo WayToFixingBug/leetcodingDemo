@@ -1,4 +1,4 @@
-package WayToFixBug.Stack;
+package WayToFixBug.Queue;
 
 import java.util.Stack;
 

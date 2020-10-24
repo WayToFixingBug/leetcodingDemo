@@ -40,6 +40,10 @@ public class ArrayQueue {
         return true;
     }
 
+    /**
+     * 出队
+     * @return
+     */
     public String dequeue() {
         //队列为空
         if (head == tail) {
