@@ -30,4 +30,27 @@ public class SortAlgorithm {
             }
         }
     }
+
+    /**
+     * 直接插入排序
+     *
+     * @param a
+     */
+    public void insertSort(int[] a) {
+        if (a.length <= 1) {
+            return;
+        }
+        for (int i = 1; i < a.length; i++) {
+            int val = a[i];
+            int j = i - 1;
+            for (; j >= 0; --j) {
+                if (a[j] > val) {
+                    a[j + 1] = a[j];
+                } else {
+                    return;
+                }
+            }
+            a[j + 1] = val;
+        }
+    }
 }
